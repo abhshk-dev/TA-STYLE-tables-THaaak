@@ -55,10 +55,12 @@ body{
     line-height: 1.5;
     font-size: 16px;
     font-family: 'Open Sans', sans-serif;
+    
 }
 /*--- Variables----*/
 :root{
     --primary:rgb(237,86,58);
+    --textlight:rgb(145, 134, 134);
 }
 /* ---- Buttons ---*/
 .btn{
@@ -66,14 +68,51 @@ body{
     color: #fff;
     padding: 12px 24px;
 }
+.btn-primary{
+    padding: 10px 30px;
+}
+.btn:hover{
+    background: rgba(237,86,58,0.78878);
+}
 
-
+.btn-secondary{
+    padding: 16px 32px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 18px;
+    width: 100%;
+}
 /*-----General section----*/
 a{
     text-decoration: none;
     text-transform: uppercase;
 }
-
+.item-center{
+    align-items: center;
+}
+.text-center{
+    text-align: center;
+}
+.sec-header{
+    font-size: 28px;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    max-width: 620px;
+    margin: 0 auto;
+    margin-bottom: 44px;
+    
+}
+.sec-header p{
+    font-size: 16px;
+    color: var(--textlight);
+    margin: 12px 0px;
+    text-transform: none;
+    font-weight: 500;
+}
+.font-0{
+    font-size: 0;
+}
 .orange{
     color: var(--primary);
 }
@@ -82,21 +121,79 @@ a{
     justify-content: space-between;
     align-items: center;
 }
+.flex-25{
+    flex: 0 1 20%;
+}
+.flex-30{
+    flex: 0 1 30%;
+}
+.flex-65{
+    flex: 0 1 60%;
+}
+.flex-50{
+    flex: 0 1 50%;
+}
+.flex-45{
+    flex: 0 1 45%;
+}
+.flex-48{
+    flex: 0 1 48%;
+}
+.stretch{
+    align-self: stretch;
+}
 .container{
     max-width: 1300px;
     margin: 0 auto;
     padding: 0 32px;
 }
-
+.small-container{
+    width: 60%;
+}
+.wrap{
+    flex-wrap: wrap;
+}
+.start{
+    justify-content: flex-start;
+    
+}
+.between{
+    justify-content: space-between;
+}
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.column{
+    flex-direction: column;
+}
+.overlay{
+    background: rgba(35,45,56,0.78);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
 .padding{
     padding: 0px 120px;
+}
+.padding-2{
+    padding: 80px 0px;
 }
 /*---Header section---*/
 
 .header{
     padding: 20px;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+   
     
-    background-color: rgba(186, 191, 197,0.89);
+    background-color: rgba(224, 224, 224, 0.233);
+    
     
 }
 .brand{
@@ -116,4 +213,222 @@ a{
 }
 .navbar .active{
     color: var(--primary);
+}
+/*----Hero section----*/
+.hero{
+    position: relative;
+}
+
+.hero video{
+    width: 100%;
+    max-height: 100vh;
+    object-fit: cover;
+    background: linear-gradient(to bottom, rgba);
+}
+.sub-heading{
+    font-size: 16px;
+    font-weight: 600;
+    color: rgb(247, 247, 247);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+.hero-header{
+    font-size: 56px;
+    font-weight: 800;
+    color: rgb(241, 241, 241);
+    text-transform: uppercase;
+    padding: 14px 0px;
+}
+.hero .btn{
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+/*------Programs section----*/
+
+.programs{
+    text-align: center;
+    
+}
+.program-item{
+    margin-top: 44px;
+    text-align: start;
+}
+.program-item img{
+    margin-right: 24px;
+}
+.program-item h3{
+    font-size: 22px;
+    font-weight: 600;
+    color: #000;
+    
+}
+.program-item p{
+   font-size: 14px;
+   color: var(--textlight);
+   margin: 4px 0px;
+
+}
+.program-item a{
+    font-size: 12px;
+    cursor: pointer;
+}
+/*--- call to action ----*/
+
+.cta{
+    background: url(../assets/cta-bg.jpg) no-repeat;
+   background-size: cover;
+}
+.cta .container{
+    max-width: 992px;
+}
+.cta h2{
+    font-size: 40px;
+    font-weight:800 ;
+    color: #fff;
+    text-transform: uppercase;
+   
+}
+.cta p{
+    color:#fff;
+    margin: 28px 0px; 
+}
+
+/*----- Classes section--------*/
+.classes-item{
+    margin-bottom: 32px;
+}
+.classes-item .active{
+    color: var(--primary);
+}
+.classes-item a{
+    text-align: left;
+    box-shadow: 0px 0px 12px rgba(0,0,0,0.3);
+    padding: 16px 32px;
+    width: 100%;
+    border-radius: 4px;
+}
+.classes-item h4{
+    margin-left: 24px;
+    font-size: 18px;
+    text-transform: capitalize;
+    font-weight: 700;
+    color: #000;
+}
+.article{
+    text-align: left;
+}
+.article h3{
+    font-size: 24px;
+    font-weight: 700;
+    margin: 12px 0px;
+}
+.article p{
+    font-size: 14px;
+    font-weight: 300;
+    
+    color: var(--textlight);
+    margin: 18px 0px;
+}
+.article a{
+    padding: 10px 14px;
+    
+    font-size: 14px;
+}
+/*----Schedule section-----*/
+.schedule{
+    background:url(../assets/schedule-bg.jpg) center center/cover no-repeat;
+
+}
+.schedule h2{
+    color: #fff;
+}
+.schedule-days{
+    margin-top: 60px;
+    margin-bottom: 44px;
+}
+.schedule-days a{
+    color: #fff;
+}
+.schedule-days a:hover{
+    color: var(--primary);
+}
+.schedule-days .active{
+    color: var(--primary);
+}
+.schedule-days span{
+    margin:0px 12px;
+    color: #fff;
+}
+
+table{
+    max-width: 1200px;
+    margin: 0px auto;
+    color: #fff;
+}
+td{
+    font-size: 14px;
+    padding: 40px 48px;
+    text-align: center;
+    border: 1px solid;
+}
+/*----trainers section-----*/
+
+.trainer-item{
+    padding: 32px;
+    box-shadow: 0px 0px 12px rgba(0,0,0,0.1);
+}
+.trainer-item h5{
+    color: var(--primary);
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 16px;
+}
+.trainer-item h3{
+    font-size: 24px;
+    font-weight: 600;
+    margin: 12px 0px;
+}
+.trainer-item p{
+    color: var(--textlight);
+    line-height: 1.7;
+    font-size: 14px;
+}
+.trainer-item li{
+    margin-top: 16px;
+    margin-right: 16px;
+    
+}
+.trainer-item li a{
+    color: #000;
+}
+
+/*-----Contact -----*/
+
+.form-bg{
+    background:url(../assets/contact-bg.jpg) center center/cover no-repeat;
+    padding: 80px 60px;
+}
+
+form{
+    background-color: #fff;
+    margin: 0 auto;
+    padding: 32px;
+}
+.form-control{
+    border: 1px solid var(--textlight);
+    display: block;
+    width: 100%;
+    margin-bottom: 24px;
+    padding: 12px 24px;
+    border-radius: 4px;
+}
+
+.form-bg .btn{
+    border: 0;
+}
+
+/*---Footer section---*/
+.footer{
+    padding: 32px 0px;
 }
